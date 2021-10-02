@@ -26,7 +26,7 @@ body {
   background: hsl(183, 100%, 15%);
   border-radius: 10px;
   width: 85%;
-  margin: 0 auto;
+  margin: 25px auto 0;
   padding: 20px;
 }
 .tip {
@@ -43,9 +43,19 @@ em {
   color: hsl(172, 67%, 45%);
 }
 .input {
-  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
   background: hsl(189, 41%, 97%);
   padding: 0 15px;
+  margin-top: 5px;
+  border: solid white 2px;
+  box-sizing: border-box;
+}
+.input:focus-within {
+  border: solid hsl(172, 67%, 45%) 2px;
+  box-sizing: border-box;
 }
 input {
   height: 40px;
@@ -55,10 +65,11 @@ input {
   color: hsl(183, 100%, 15%);
   background: hsl(189, 41%, 97%);
   border-radius: 5px;
+  width: 80%;
   border: none;
 }
 input:focus {
-  border: none;
+  outline: 0;
 }
 label {
   display: block;
@@ -75,6 +86,11 @@ button {
   padding: 8px;
   margin: 7px 10px 7px 0;
 }
+button:hover {
+  background: hsl(173, 84%, 83%);
+  color: hsl(183, 100%, 15%);
+  box-shadow: 0 0 5px 1px #ccc;
+}
 button:active {
   background: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
@@ -89,6 +105,10 @@ button.disabled {
   width: 100%;
   text-transform: uppercase;
   margin-top: 20px;
+}
+#reset:hover {
+  background: hsl(173, 84%, 83%);
+  box-shadow: none;
 }
 #reset:active {
   color: hsl(172, 67%, 45%);
@@ -106,6 +126,7 @@ button.disabled {
     width: 50%;
   }
   .right {
+    margin: 0 auto;
     width: 50%;
   }
   button {
